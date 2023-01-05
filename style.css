@@ -1,0 +1,100 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    background-color: #F2E5E5;
+    font-family: sans-serif;
+}
+
+
+.header {
+    position: relative;
+    width: 100%;
+    height: 225px;
+    background-color: #2B3A55;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+}
+
+.header-logo {
+    margin: 35px;
+    padding-left: 125px;
+}
+
+.navie ul {
+    margin-top: 155px;
+    display: flex;
+    gap: 45px;
+    align-items: center;
+    color: #F2E5E5;
+    list-style: none;
+    font-size: 2rem;
+    text-transform: uppercase;
+    font-weight: bold
+
+}
+
+.navie ul li {
+    cursor: pointer;
+}
+
+.hero-overlay {
+    position: absolute;
+    z-index: 1000;
+    background-color:black;
+    width: 100%;
+    height: 50vw;
+    opacity: .2;
+}
+
+.hero {
+    width: 100%;
+    height: 50vw;
+    background-image: url(/assets/hero-img.jpeg);
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+.hero h1 {
+    position: relative;
+    z-index: 2000;
+    text-align: center;
+    color: #F2E5E5;
+    top: 350px;
+    font-size: 4rem;
+    background-color: rgba(43,58,85,0.75);
+    padding: 25px;
+    text-transform: uppercase;
+}
+
+.cta {
+    margin-top: 55px;
+    display: grid;
+    text-align: center;
+    height: 100px;
+}
+
+.cta h1 {
+    color: #F2E5E5;
+    letter-spacing: 2px;
+}
+
+.cta button {
+    margin-top: 15px;
+    border-radius: 12px;
+    height: 64px;
+    width: 258px;
+    font-size: 1rem;
+    color: #2B3A55;
+    background-color: #F2E5E5;
+    font-weight: bold;
+    text-transform: uppercase;
+    font-family: sans-serif;
+    cursor: pointer;
+    -webkit-box-shadow: -8px 7px 19px 0px rgba(0,0,0,0.75);
+-moz-box-shadow: -8px 7px 19px 0px rgba(0,0,0,0.75);
+box-shadow: -8px 7px 19px 0px rgba(0,0,0,0.75);
+}
