@@ -1,26 +1,30 @@
+@import url('https://fonts.googleapis.com/css2?family=Work+Sans:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+
 * {
     box-sizing: border-box;
     margin: 0;
     padding: 0;
+    /* border: 3px red solid; */
 }
 
-body {
-    background-color: #F2E5E5;
+body, body {
     font-family: sans-serif;
+    min-height: 100%;
 }
 
 
 .header {
-    position: sticky;
+    position: fixed;
     width: 100%;
     height: 225px;
     background-color: #2B3A55;
     display: grid;
     grid-template-columns: 1fr 1fr 1fr;
+    z-index: 1000;
 }
 
 .header-logo {
-    margin-top: 75px;
+    margin-top: 85px;
     padding-left: 125px;
 }
 
@@ -45,40 +49,6 @@ body {
 
     color: #CD0404;
 }
-
-.hero-overlay {
-    position: absolute;
-    z-index: 1000;
-    background-color:black;
-    width: 100%;
-    height: 100vh;
-    opacity: .2;
-}
-
-.hero {
-    width: 100%;
-    height: 100vh;
-    background-image: url(/assets/hero-img.jpeg);
-    background-repeat: no-repeat;
-    background-size:cover;
-    background-position: center;
-}
-
-.hero h1 {
-    position: relative;
-    z-index: 1002;
-    text-align: center;
-    color: #F2E5E5;
-    top: 350px;
-    font-size: clamp(1rem,2.2vw,4rem);
-    background-color: rgba(43,58,85,0.75);
-    border-radius: 25px;
-    padding: 25px;
-    text-transform: uppercase;
-    width: 50vw;
-    margin: 0 auto;
-}
-
 
 
 .cta {
@@ -122,77 +92,298 @@ box-shadow: -8px 7px 19px 0px rgba(0,0,0,0.75);
     background-color: #CD0404;
 }
 
-.header-logo-mobile {
-    display: none;
+
+.hero {
+    background: url(/assets/hero-img.jpeg) no-repeat center center fixed; 
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
+    width: 100vw;
+    height: 70vh;
 }
 
-.cta-mobile {
-    display: none;
+
+.hero-text {
+    position: relative;
+    color:#2B3A55;
+    top: 4em;
+    font-size: clamp(1rem,2.2vw,2rem);
+    text-transform: uppercase;
+    width: 850px;
+    margin-right: 15em;
+    font-family: 'Work Sans', sans-serif;
+    font-weight: 200;
+    float: right;
+    text-align: right;
 }
 
-@media(max-width: 1784px) {
-    
-    .header {
-        display: none
-    }
+.hero-text span {
+    color: #CD0404;
+}
 
-    .header-logo-mobile {
-        display: block;
-        position: absolute;
-        left: 50%;
-        right: 50%;
-        transform: translate(-50%, -50%);
-        margin-top: 250px;
-        width: clamp(250px,40vw,450px);
-    }
 
-    .hero h1 {
-        top: 500px;
-    }
-
-    .cta-mobile {
-        z-index: 3000;
-        display: block;
-        position: absolute;
-        left: 50%;
-        right: 50%;
-        transform: translate(-50%, -50%);
-        text-align: center;
-        bottom: 150px;
-        width: 100%;
-    }
-
-    .cta-mobile h1 {
-        color: #F2E5E5;
-        letter-spacing: 2px;
-    }
-
-    .cta-mobile button {
-        margin-top: 15px;
-        border-radius: 12px;
-        border: none;
-        height: 64px;
-        width: 258px;
-        font-size: 1.2rem;
-        color: #2B3A55;
-        background-color: #F2E5E5;
-        font-weight: bold;
-        text-transform: uppercase;
-        font-family: sans-serif;
-        cursor: pointer;
-        -webkit-box-shadow: -8px 7px 19px 0px rgba(0,0,0,0.75);
+.hero-text button {
+    margin-top: 25px;
+    border-radius: 12px;
+    border: none;
+    height: 64px;
+    width: 258px;
+    font-size: 1.2rem;
+    font-family: 'Work Sans', sans-serif;
+    color: #F2E5E5;
+    background-color: #CD0404;
+    font-weight: bold;
+    text-transform: uppercase;
+    font-family: sans-serif;
+    cursor: pointer;
+    -webkit-box-shadow: -8px 7px 19px 0px rgba(0,0,0,0.75);
     -moz-box-shadow: -8px 7px 19px 0px rgba(0,0,0,0.75);
     box-shadow: -8px 7px 19px 0px rgba(0,0,0,0.75);
-    }
+}
 
-    .cta-mobile button:hover {
-        background-color: #FF0032;
-        color: #F2E5E5;
-    }
-    
-    
-    .cta-mobile button:active {
-        background-color: #CD0404;
-    }
 
+.hero-text button:hover {
+    background-color: #F2E5E5;
+    color: #2B3A55;
+}
+
+
+.hero-text button:active {
+    background-color: #c5bbbb;
+}
+
+
+a {
+    color: #F2E5E5;
+    text-decoration: none;
+}
+
+a:visited {
+    color: #F2E5E5;
+}
+
+/* GRID */
+
+
+.main-container {
+    position: relative;
+    width: 100vw;
+    min-height: 100%;
+    margin-bottom: 95px;
+    display: grid;
+    align-items: center;
+    justify-content: center;
+}
+
+.main-container:after {
+    content:'';
+    background: url(/assets/tool-pattern.jpeg) no-repeat center center fixed;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
+    width: 100vw;
+    height: 2050px;
+    position: absolute;
+    opacity: .25;
+
+}
+
+.services-container {
+    margin-top: 25em;
+    width: 1280px;
+    background-color: rgba(255, 255, 255, 1);
+    border-radius: 45px;
+    position: relative;
+    z-index: 1;
+    border: #2B3A55 solid 2px;
+    
+}
+
+.grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-gap: 75px;
+    padding: 4em;
+    justify-content: center;
+
+}
+
+.griddy {
+    width: 560;
+    height: 350px;
+    background-color: white;
+    border: #2B3A55 2px solid;
+    border-radius: 15px;
+    -webkit-box-shadow: 6px 6px 40px -3px rgba(0,0,0,0.75);
+    -moz-box-shadow: 6px 6px 40px -3px rgba(0,0,0,0.75);
+    box-shadow: 6px 6px 40px -3px rgba(0,0,0,0.75);
+}
+
+.grid-wrapper {
+    margin-top: 1.5em;
+}
+
+.electrical-grid-1 {
+    padding: 2em;
+    font-family: 'Work Sans', sans-serif;
+    transition: all .2s ease-in-out;
+}
+
+.electrical-grid-1:hover {
+    transform: scale(1.1);
+}
+
+.electrical-grid-1 p {
+    color: #2B3A55;
+    font-weight: bold;
+    text-align: center;
+    margin-top: 2em;
+}
+
+.electrical-grid-1 h1 {
+    margin-top: 26px;
+    text-align: center;
+    text-transform: uppercase;
+}
+
+.plumbing-grid-2 {
+    padding: 2em;
+    font-family: 'Work Sans', sans-serif;
+    transition: all .2s ease-in-out;
+}
+
+.plumbing-grid-2:hover {
+    transform: scale(1.1);
+}
+
+.plumbing-grid-2 p {
+    color: #2B3A55;
+    font-weight: bold;
+    text-align: center;
+    margin-top: 2em;
+}
+
+.plumbing-grid-2 h1 {
+    margin-top: 26px;
+    text-align: center;
+    text-transform: uppercase;
+}
+
+.demo-junk-grid-3 {
+    padding: 2em;
+    font-family: 'Work Sans', sans-serif;
+    transition: all .2s ease-in-out;
+}
+
+.demo-junk-grid-3:hover {
+    transform: scale(1.1);
+}
+
+.demo-junk-grid-3 p {
+    color: #2B3A55;
+    font-weight: bold;
+    text-align: center;
+    margin-top: 2em;
+}
+
+.demo-junk-grid-3 h1 {
+    margin-top: 26px;
+    text-align: center;
+    text-transform: uppercase;
+}
+
+.flooring-grid-4 {
+    padding: 2em;
+    font-family: 'Work Sans', sans-serif;
+    transition: all .2s ease-in-out;
+}
+
+.flooring-grid-4:hover {
+    transform: scale(1.1);
+}
+
+.flooring-grid-4 p {
+    color: #2B3A55;
+    font-weight: bold;
+    text-align: center;
+    margin-top: 2em;
+}
+
+.flooring-grid-4 h1 {
+    margin-top: 26px;
+    text-align: center;
+    text-transform: uppercase;
+}
+
+.assembly-grid-5 {
+    padding: 2em;
+    font-family: 'Work Sans', sans-serif;
+    transition: all .2s ease-in-out;
+}
+
+.assembly-grid-5:hover {
+    transform: scale(1.1);
+}
+
+.assembly-grid-5 p {
+    color: #2B3A55;
+    font-weight: bold;
+    text-align: center;
+    margin-top: 2em;
+}
+
+.assembly-grid-5 h1 {
+    margin-top: 26px;
+    text-align: center;
+    text-transform: uppercase;
+}
+
+
+.installation-grid-6 {
+    padding: 2em;
+    font-family: 'Work Sans', sans-serif;
+    transition: all .2s ease-in-out;
+}
+
+.installation-grid-6:hover {
+    transform: scale(1.1);
+}
+
+.installation-grid-6 p {
+    color: #2B3A55;
+    font-weight: bold;
+    text-align: center;
+    margin-top: 2em;
+}
+
+.installation-grid-6 h1 {
+    margin-top: 26px;
+    text-align: center;
+    text-transform: uppercase;
+}
+
+
+.grid-icon {
+    display: block;
+    margin: 0 auto;
+}
+
+/* END GRID */
+
+
+/* FOOTER */
+
+.container {
+    position: relative;
+    width: 100%;
+    text-align: center;
+    color: #c5bbbb;
+    background-color: #2B3A55;
+    padding: 1em;
+}
+
+.container p {
+    font-size: 2em;
 }
