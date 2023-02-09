@@ -5,30 +5,74 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="style.css">
-    <title>Honeydooo</title>
+    <script src="script.js" defer></script>
+
+<!-- Primary Meta Tags -->
+<title>Honeydooo - Handyman Services</title>
+<meta name="title" content="Honeydooo - Handyman Services">
+<meta name="description" content="Give us a call and you won’t have to
+remind them every 6 months to GET ‘ER DONE!.">
+
+<!-- Open Graph / Facebook -->
+<meta property="og:type" content="website">
+<meta property="og:url" content="https://honeydooo.net">
+<meta property="og:title" content="Honeydooo - Handyman Services">
+<meta property="og:description" content="Give us a call and you won’t have to
+remind them every 6 months to GET ‘ER DONE!.">
+<meta property="og:image" content="http://127.0.0.1:5500/assets/honey-logo.png">
+
+<!-- Twitter -->
+<meta property="twitter:card" content="summary_large_image">
+<meta property="twitter:url" content="https://honeydooo.net">
+<meta property="twitter:title" content="Honeydooo - Handyman Services">
+<meta property="twitter:description" content="Give us a call and you won’t have to
+remind them every 6 months to GET ‘ER DONE!.">
+<meta property="twitter:image" content="http://127.0.0.1:5500/assets/honey-logo.png">
+
+<link rel="icon" type="image/x-icon" href="/assets/favicon.ico">
+
 
 </head>
 <body>
 
 <!-- TOP NAV -->
 
-    <header>
-        <div class="header">
-            <img class="header-logo" src="/assets/honey-logo.png" alt="honeydooo logo" height="250px">
-            <nav class="navie">
-                <ul>
-                    <a href="index.html"><li>Home</li></a>
-                    <a href="#"><li>Services</li></a>
-                    <li>Projects</li>
-                    <li>Contact</li>
-                </ul>
-            </nav>
-            <div class="cta">
-                <h1>(951) 712-0481</h1>
-                <a href="mailto: myoung1264@yahoo.com"><button>Request Service</button></a>
-            </div>
+<header>
+        
+    <div class="header">
+        <div class="toggle" id="top"></div> 
+        <div class="showcase" >
+            <ul class="nav-list-mobile toggle-nav">
+                <a href="index.html" >
+                <li>Home</li>
+            </a>
+                
+                <a href="#"><li>Services</li></a>
+            
+            <a href="projects.html">
+                <li>Projects</li>
+            </a>
+            <a href="contact.html">
+                <li>Contact</li>
+            </a>
+            
+            </ul>
+    </div>
+        <a href="index.html"><img class="header-logo" src="/assets/honey-logo.png" alt="honeydooo logo"></a>
+        <nav class="navie">
+            <ul>
+                <a href="index.html"><li>Home</li></a>
+                <a href="#"><li>Services</li></a>
+                <a href="projects.html"><li>Projects</li></a>
+                <a href="contact.html"><li>Contact</li></a>
+            </ul>
+        </nav>
+        <div class="cta">
+            <h1>(951) 712-0481</h1>
+            <a href="mailto: myoung1264@yahoo.com"><button>Request Service</button></a>
         </div>
-    </header>
+    </div>
+</header>
 
     <!-- TOP NAV END -->
         
@@ -42,12 +86,11 @@
         <div class="services-container">
             <div class="grid">
                 <div class="electrical-grid-1 griddy">
-                    <div class="grid-wrapper">
+                    
                     <svg class="grid-icon" version="1.1" id="_x32_" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 512 512" xml:space="preserve" width="64px" height="64px" fill="#CD0404" stroke="#CD0404"><g id="SVGRepo_bgCarrier" stroke-width="0"></g><g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round" stroke="#CCCCCC" stroke-width="3.072"></g><g id="SVGRepo_iconCarrier"> <style type="text/css"> .st0{fill:#CD0404;} </style> <g> <path class="st0" d="M353.622,121.496V13.534C353.622,6.06,347.569,0,340.102,0h-21.63c-7.467,0-13.527,6.06-13.527,13.534v107.962 h-97.892V13.534C207.054,6.06,201.001,0,193.527,0h-21.622c-7.474,0-13.527,6.06-13.527,13.534v107.962h-56.409v45.962h308.063 v-45.962H353.622z"></path> <path class="st0" d="M101.968,245.307c0,55.332,32.946,102.944,80.271,124.386v29.699c0,14.261,11.568,25.828,25.829,25.828h95.863 c14.268,0,25.829-11.567,25.829-25.828v-29.699c47.332-21.441,80.271-69.054,80.271-124.386v-56.969H101.968V245.307z"></path> <rect x="226.711" y="444.366" class="st0" width="58.578" height="67.634"></rect> </g> </g></svg>
                     <h1>Electrical</h1>
                     <p>Have household projects that involve electrical components? If it feels like overkill to hire an electrician, 
                         hire Honeydooo instead. I can install new features and fix existing ones.</p>
-                </div>
             </div>
                 <div class="plumbing-grid-2 griddy">
                     <svg class="grid-icon" fill="#CD0404" width="64px" height="64px" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><g id="SVGRepo_bgCarrier" stroke-width="0"></g><g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round"></g><g id="SVGRepo_iconCarrier"><path d="M21,9H9V3A2,2,0,0,0,7,1H3A2,2,0,0,0,1,3V9a5.006,5.006,0,0,0,5,5H7.073A7.061,7.061,0,0,0,11,19.319l-.925,2.31A1,1,0,0,0,11,23h8a1,1,0,0,0,.929-1.371L19,19.319A7.045,7.045,0,0,0,23,13V11A2,2,0,0,0,21,9Zm0,2v1H9V11ZM3,9V3H7v9H6A3,3,0,0,1,3,9Zm14.417,8.793a1,1,0,0,0-.645,1.33L17.523,21H12.477l.751-1.877a1,1,0,0,0-.645-1.33A5.034,5.034,0,0,1,9.1,14H20.9A5.034,5.034,0,0,1,17.417,17.793Z"></path></g></svg>
@@ -84,12 +127,15 @@
             
 
     </main>
-    <div class="div"></div>
     <!-- END OF MAIN HERO -->
-    <footer>
-        <div class="container">
-            <p>test</p>
-        </div>
+    
+    <footer id="footer">
+        
+        <p>
+            <a href="http://dreamerdigital.net">Website by Dreamer Digital</a>
+        </p>
+    
     </footer>
+
 </body>
 </html>

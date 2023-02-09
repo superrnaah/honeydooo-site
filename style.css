@@ -7,25 +7,28 @@
     /* border: 3px red solid; */
 }
 
-body, body {
+html, body {
     font-family: sans-serif;
     min-height: 100%;
+    overflow-x: hidden;
 }
 
 
 .header {
-    position: fixed;
     width: 100%;
     height: 225px;
     background-color: #2B3A55;
     display: grid;
     grid-template-columns: 1fr 1fr 1fr;
-    z-index: 1000;
+    z-index: 2000;
+    position: relative;
 }
 
 .header-logo {
     margin-top: 85px;
     padding-left: 125px;
+    padding-right: 25px;
+    height: clamp(200px,6.2vw,250px);
 }
 
 .navie ul {
@@ -35,9 +38,11 @@ body, body {
     align-items: center;
     color: #F2E5E5;
     list-style: none;
-    font-size: 2rem;
+    font-size: clamp(1.2rem,2.2vw,1.8rem);
     text-transform: uppercase;
-    font-weight: bold
+    font-weight: bold;
+    letter-spacing: 4px;
+
 
 }
 
@@ -52,10 +57,9 @@ body, body {
 
 
 .cta {
-    position: absolute;
-    margin-right: 255px;
+    position: relative;
     margin-top: 55px;
-    right: 0;
+    padding-left: 25px;
     text-align: center;
 }
 
@@ -92,6 +96,9 @@ box-shadow: -8px 7px 19px 0px rgba(0,0,0,0.75);
     background-color: #CD0404;
 }
 
+.toggle {
+    display: none;
+}
 
 .hero {
     background: url(/assets/hero-img.jpeg) no-repeat center center fixed; 
@@ -100,17 +107,17 @@ box-shadow: -8px 7px 19px 0px rgba(0,0,0,0.75);
     -o-background-size: cover;
     background-size: cover;
     width: 100vw;
-    height: 70vh;
+    min-height: 100vh;
 }
 
 
 .hero-text {
     position: relative;
     color:#2B3A55;
-    top: 4em;
+    margin-top: 10em;
+    /* top: clamp(28em,100%,24em); */
     font-size: clamp(1rem,2.2vw,2rem);
     text-transform: uppercase;
-    width: 850px;
     margin-right: 15em;
     font-family: 'Work Sans', sans-serif;
     font-weight: 200;
@@ -128,8 +135,10 @@ box-shadow: -8px 7px 19px 0px rgba(0,0,0,0.75);
     border-radius: 12px;
     border: none;
     height: 64px;
+    max-height: 100%;
     width: 258px;
-    font-size: 1.2rem;
+    max-width: 100%;
+    font-size: clamp(.8rem,4.2vw,1.2rem);
     font-family: 'Work Sans', sans-serif;
     color: #F2E5E5;
     background-color: #CD0404;
@@ -168,12 +177,11 @@ a:visited {
 
 .main-container {
     position: relative;
-    width: 100vw;
-    min-height: 100%;
-    margin-bottom: 95px;
+    padding-bottom: 6em;
     display: grid;
     align-items: center;
     justify-content: center;
+    overflow-y: hidden;
 }
 
 .main-container:after {
@@ -184,21 +192,20 @@ a:visited {
     -o-background-size: cover;
     background-size: cover;
     width: 100vw;
-    height: 2050px;
+    height: 1853px;
     position: absolute;
     opacity: .25;
 
 }
 
 .services-container {
-    margin-top: 25em;
+    margin-top: 15em;
     width: 1280px;
     background-color: rgba(255, 255, 255, 1);
     border-radius: 45px;
     position: relative;
     z-index: 1;
     border: #2B3A55 solid 2px;
-    
 }
 
 .grid {
@@ -211,14 +218,20 @@ a:visited {
 }
 
 .griddy {
-    width: 560;
-    height: 350px;
-    background-color: white;
+    background-color:aliceblue;
     border: #2B3A55 2px solid;
     border-radius: 15px;
     -webkit-box-shadow: 6px 6px 40px -3px rgba(0,0,0,0.75);
     -moz-box-shadow: 6px 6px 40px -3px rgba(0,0,0,0.75);
     box-shadow: 6px 6px 40px -3px rgba(0,0,0,0.75);
+}
+
+.griddy h1 {
+    font-size: clamp(1rem,2.2vw,2rem);
+}
+
+.griddy:hover {
+    cursor: pointer;
 }
 
 .grid-wrapper {
@@ -375,15 +388,163 @@ a:visited {
 
 /* FOOTER */
 
-.container {
-    position: relative;
+#footer {
+    position: absolute;
     width: 100%;
-    text-align: center;
-    color: #c5bbbb;
     background-color: #2B3A55;
-    padding: 1em;
+    color:aliceblue;
+    text-align: center;
+    clear: both;
 }
 
-.container p {
-    font-size: 2em;
+
+#footer p {
+    padding: 2rem;
+    letter-spacing: 2px;
+    font-weight: 700;
+    font-family: 'Work Sans', sans-serif;
+}
+
+#footer p a:hover {
+    color: #4D80BF;
+}
+
+
+.showcase {
+    display: none;
+}
+
+@media screen and (max-width: 1410px) {
+    .cta {
+        display: none;
+    }
+
+    .hero-text {
+        text-align: center;
+        margin: 0 auto;
+        float: none;
+        padding: 10em 2em;
+    }
+
+    
+
+}
+
+
+@media screen and (max-width: 1286px) {
+
+    .main-container:after {
+        height: 2680px;    
+    }
+    
+
+
+    .services-container {
+        max-width: clamp(350px,92vw,1000px);
+    }
+
+    .grid {
+        grid-template-columns: repeat(1, 850px);
+    }
+}
+
+@media screen and (max-width: 1018px) {
+    
+    .main-container:after {
+        height: 3480px;    
+    }
+
+    
+    .navie {
+        display: none;
+    }
+
+    .header-logo {
+        padding: 0;
+        margin: 85px auto;
+        display: inline-block;
+        position: absolute;
+        left: 0;
+        right: 0;
+    }
+
+
+    .grid {
+        grid-template-columns: repeat(1, 450px);
+    }
+
+    .toggle {
+        display: block;
+        position: fixed;
+        width: clamp(10px,10.6vw,60px);
+        height: clamp(10px,10.6vw,60px);
+        background: url(assets/menu.png);
+        background-repeat: no-repeat;
+        background-size: 35px;
+        background-position: center;
+        cursor: pointer;
+        right: 0;
+        top: 0;
+        z-index: 3000;
+        margin: 20px;
+        transition: .2s;
+      }
+      
+      .toggle.active {
+        background: url(assets/close.png);
+        background-repeat: no-repeat;
+        background-size: 30px;
+        background-position: center;
+        
+      }
+    
+      .showcase {
+        position: fixed;
+        height: 100vh;
+        background: aliceblue;
+        right: -19em;
+        display: flex;
+        z-index: 1;
+        justify-content: space-between;
+        align-items: center;
+        transition: 0.5s;
+      }
+
+      .showcase.active {
+        right: 1px;
+        width: clamp(300px,6.2vw,350px);
+        font-size: clamp(.5rem, 60vw,.8rem);
+        margin: 0 auto;
+      }
+
+
+      .nav-list-mobile {
+        position: relative;
+        display: grid;
+        list-style-type: none;
+        text-align: center;
+        text-transform: uppercase;
+        font-size: 2em;
+        padding: 2em 2em;
+        bottom: 8em;
+        left: 1em;
+        line-height: 1.5em;
+        color: #CD0404;
+      }
+      
+.nav-list-mobile li {
+    color: #CD0404;
+}
+
+      .nav-list-mobile li:hover {
+        color: #2B3A55;
+      }
+
+}
+
+@media screen and (max-width: 1018px) {
+    .grid {
+        grid-template-columns: repeat(1, 250px);
+    }
+
 }
