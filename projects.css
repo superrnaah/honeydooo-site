@@ -199,6 +199,28 @@ a:visited {
     
 }
 
+.mail-1:hover .test {
+    display: block;
+}
+
+.mail-2:hover .test {
+    display: block;
+}
+
+.mail-1 {
+    background-image: url(assets/mail-1.JPEG);
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+
+.mail-2 {
+    background-image: url(assets/mail-2.JPEG);
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+
 .gate-2 {
     background-image: url(assets/gate-2.JPG);
     background-position: center;
@@ -509,12 +531,3 @@ a:visited {
 
 }
 
-@media screen and (max-width: 1018px) {
-
-    
-
-    .gallery {
-        grid-template-columns: repeat(2, 3fr);
-        padding-bottom: 2em;
-        }
-}
